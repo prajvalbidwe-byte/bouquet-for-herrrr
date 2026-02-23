@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Romantic Bouquet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#ffe6f0;
+text-align:center;
+overflow:hidden;
+}
+
+h1{
+margin-top:50px;
+color:#ff3366;
+font-size:40px;
+}
+
+p{
+font-size:22px;
+}
+
+/* Floating hearts */
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:float 6s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-800px);}
+}
+
+/* Bouquet */
+
+.box{
+
+margin-top:50px;
+
+font-size:80px;
+
+}
+
+/* Button */
+
+button{
+
+padding:15px 30px;
+
+font-size:20px;
+
+background:#ff3366;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🌸 Bouquet For You 🌸</h1>
+
+<p>You make my life beautiful ❤️</p>
+
+<div class="box">
+🌹 🌷 🌼 💐
+</div>
+
+<br><br>
+
+<button onclick="love()">
+
+Click Here ❤️
+
+</button>
+
+<script>
+
+function love(){
+
+alert("I Love You ❤️");
+
+}
+
+/* hearts */
+
+for(let i=0;i<20;i++){
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="heart";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.top=Math.random()*100+"%";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
